@@ -4,7 +4,6 @@
 }
 .form-index >.field > .text-form{
     border-radius: 0px 6px;
-    /* margin-bottom: 2px; */
     border: 1px solid black;
     height: 1.5em;
     background-color: #D9D9D9;
@@ -27,6 +26,7 @@
     margin-top: 0;
     margin-bottom: 2px;
 }
+
 @media screen and (max-width: 560px) {
     .form-index{
         top: 1em;

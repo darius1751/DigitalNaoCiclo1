@@ -8,7 +8,10 @@ const initialForm: Form = {
     email: "",
     phone: "",
 };
-export const IndexForm = () => {
+export type PropsIndexForm = {
+    setEnable: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export const IndexForm = ({ setEnable }: PropsIndexForm) => {
     const [ form, handleChange ] = UseForm<Form>(initialForm);
     const { name, email, phone } = form;
     const handleSubmit = (e: FormEvent<HTMLFormElement>)=>{
@@ -16,11 +19,13 @@ export const IndexForm = () => {
         if (e.currentTarget.checkValidity() && validatePhone(phone)) {
             e.preventDefault();
             e.stopPropagation()
+            alert(`Se ha enviado correctamente ${email}`);
+            setEnable(false);
         }
           e.currentTarget.classList.add('was-validated')
     }
     return (
-        <form className="form-index needs-validation" onSubmit={handleSubmit} noValidate>
+        <form className = "form-index needs-validation" onSubmit={handleSubmit} noValidate>
             <p>
                 Llena el formulario 
                 <br/>
