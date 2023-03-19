@@ -1,0 +1,32 @@
+.front-page{
+    width: 40em;
+    float: right;  
+}
+.content{
+    clear: both;
+    margin: 0 auto;
+    text-align: center;
+}
+.content > .welcome{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    text-align: center;
+}
+.content > .pillar{
+    width: 10em;
+    margin-bottom: 4em;
+}
+.content > .pillar:nth-child(2n){
+    float: left;
+    clear: left;
+}
+.content > .pillar:nth-child(odd){
+    float: right;
+}
+.content > .pillar > .image{
+    width: 10em;
+}
+.content > .pillar > p{
+    width: 10em;
+}
