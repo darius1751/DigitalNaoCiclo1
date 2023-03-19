@@ -16,6 +16,6 @@
     ```bash
     $ yarn build #Or npm run build
     ```
-    
+    To run build, the node create folder `dist` or `build` this is folder of ***Production***
     
 
