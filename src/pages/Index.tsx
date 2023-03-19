@@ -1,18 +1,22 @@
+import { useState } from 'react';
+import { FaCheck } from 'react-icons/fa';
 import {IndexForm} from '../components/IndexForm';
+import { IndexFooter } from '../components/Footer';
+import { Pillar } from '../components/Pillar';
 import portada from '../assets/images/portada.svg';
 import talentoHumano from '../assets/images/talentoHumano.svg';
 import marketingDigital from '../assets/images/MarketingMulticanal.svg';
 import tesoreria from '../assets/images/FinanzasColaborativas.svg'
 import logistica from '../assets/images/logistica.svg';
 import '../styles/index.css';
-import { IndexFooter } from '../components/Footer';
-import { Pillar } from '../components/Pillar';
 export const Index = ( ) => {
+    const [enableForm, setEnableForm] = useState(true);
     return (
         <div className="page">
             <article className='header'>
                 <img src = {portada} alt="Portada" className='front-page'/>
-                <IndexForm/>
+                { enableForm && <IndexForm setEnable={ setEnableForm }/> }
+                { enableForm || <FaCheck className='check-form'/>}
             </article>
             <article className='content'>
                 <p className='welcome'>Hola, te damos la bienvenida a este maravilloso espacio, donde podras recibira apoyo en lo que necesites con respecto a Administracion y direccion de empresas, de una forma dinamica y creativa.</p>
@@ -21,7 +25,7 @@ export const Index = ( ) => {
                 <Pillar image={tesoreria} title='Tesoreria' text='Hacer crecer exponencialmente el valor de tu negocio.'/>
                 <Pillar image={logistica} title='Logistica' text='Como organizar tu negocio, para lograr metas previamente establecidas'/>
             </article>
-            <IndexFooter/>            
+            <IndexFooter/>
         </div>
     )
 }
