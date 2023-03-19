@@ -1,5 +1,12 @@
 # Welcome to the documentation
 
+## Prerequisites
+
+* Nodejs
+* npm
+
+#
+
 1. Install Dependencies
    
     ```bash
@@ -12,7 +19,7 @@
     $ yarn start:dev #Or npm run start:dev
     ```
 #
-3. You want create ***build*** for **production**?
+1. You want create ***build*** for **production**?
     ```bash
     $ yarn build #Or npm run build
     ```
