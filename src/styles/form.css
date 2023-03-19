@@ -1,10 +1,10 @@
 .form-index{
     position: absolute;
-    top:10%;
+    top:15%;
 }
-.form-index > .text-form{
+.form-index >.field > .text-form{
     border-radius: 0px 6px;
-    margin-bottom: 1em;
+    /* margin-bottom: 2px; */
     border: 1px solid black;
     height: 1.5em;
     background-color: #D9D9D9;
@@ -16,15 +16,22 @@
     height: 2em;
     border: transparent;
     cursor: pointer;
-    margin: 0 auto;    
+    margin: 0 auto 0px 4.5em;
 }
 .form-index > p{
     text-align: center;
     text-align: center;
     width: 100%;
 }
-@media screen and (max-width: 500px) {
+.form-index > div[class$='-feedback']{
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+@media screen and (max-width: 560px) {
     .form-index{
-        top: 5%;
+        top: 1em;
+    }
+    .form-index > .btn-form{
+        margin-top: 0;
     }
 }
